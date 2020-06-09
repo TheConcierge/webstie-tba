@@ -1,0 +1,52 @@
+<div>
+<ul class="list-group">
+  {{#each cocktails}}
+  <li class="list-group-item">
+    <div onclick="location.href='/cocktails/{{key}}';" style="cursor: pointer;" class="container">
+      <div class="row">
+          <h1 class="text-center">{{name}}</h1>
+      </div>
+      <div class="row">
+        <div class="container">
+          <div class="col-sm-3">
+            <div class="row">
+              <img src={{url}} class="img-responsive" alt="Responsive image">
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="row">
+              <h3 class="text-center">Liquor</h3>
+            </div>       
+            {{#each liquors}}
+            <div class="row">
+              <p class="text-center">{{amount}} {{brand}} {{type}}</p>
+            </div>
+            {{/each}}
+          </div>
+          <div class="col-sm-3">
+            <div class="row">
+              <h3 class="text-center">Ingredients</h3>
+            </div>   
+            {{#each ingredients}}
+            <div class="row">
+              <p class="text-center">{{amount}} {{brand}} {{type}}</p>
+            </div>
+            {{/each}}
+          </div>        
+          <div class="col-sm-3">
+            <div class="row">
+              <h3 class="text-center">Garnishes</h3>
+            </div> 
+            {{#each garnishes}}
+            <div class="row">
+              <p class="text-center">{{amount}} {{brand}} {{type}}</p>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+  {{/each}}
+</ul>
+</div>

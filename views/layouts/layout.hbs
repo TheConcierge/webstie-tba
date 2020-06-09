@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+     
+    <!---CDN Links-->
+    <link rel="stylesheet" href="/css/main.css"> 
+        
+</head>
+<body>
+    <div id="wrapper">
+            
+					<header id="header">
+						<h1><a href="/">Website (Real Name TBA)</a></h1>
+						<nav class="links">
+							<ul>
+								<li><a href="/articles">Articles</a></li>
+								<li><a href="/cocktails">Cocktails</a></li>
+								<li><a href="/recipes">Recipes</a></li>
+								<li><a href="/roadmap">Roadmap</a></li>
+								<li><a href="/about">About</a></li>
+							</ul>
+						</nav>
+						<nav class="main">
+							<ul>
+								<li class="search">
+									<a class="fa-search" href="#search">Search</a>
+									<form id="search" method="post" action="/search">
+										<input type="text" name="name" placeholder="Search" />
+									</form>
+								</li>
+								<li class="menu">
+									<a class="fa-bars" href="#menu">Menu</a>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<section id="menu">
+
+						<!-- Search -->
+							<section>
+								<form class="search" method="post" action="/search">
+									<input type="text" name="name" placeholder="Search" />
+								</form>
+							</section>
+
+						<!-- Links -->
+							<section>
+								<ul class="links">
+									<li>
+										<a href="/articles">
+											<h3>Articles</h3>
+										</a>
+									</li>
+									<li>
+										<a href="/cocktails">
+											<h3>Cocktails</h3>
+										</a>
+									</li>
+									<li>
+										<a href="/recipes">
+											<h3>Recipes</h3>
+										</a>
+									</li>
+									<li>
+										<a href="/roadmap">
+											<h3>Roadmap</h3>
+										</a>
+									</li>
+									<li>
+										<a href="/about">
+											<h3>About</h3>
+										</a>
+									</li>
+								</ul>
+							</section>
+
+						<!-- Actions -->
+							<section>
+								<ul class="actions stacked">
+									<li><a href="" class="button large fit">Resume</a></li>
+								</ul>
+							</section>
+
+					</section>
+
+    <br/>
+    {{{body}}}
+    </div>
+    <script src='/js/jquery.min.js'></script>
+    <script src='/js/browser.min.js'></script>
+    <script src='/js/breakpoints.min.js'></script>
+    <script src='/js/util.js'></script>
+    <script src='/js/main.js'></script>
+</body>
+</html>

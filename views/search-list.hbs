@@ -1,0 +1,26 @@
+<div id="main">
+    {{#each posts}}	
+        <article class="post">
+            <header>
+                <div class="title">
+                    <h2><a href="/{{category}}/{{custom_id}}">{{title}}</a></h2>
+                    <p>{{tagline}}</p>
+                </div>
+                <div class="meta">
+                    <time class="published">{{moment updated_at "LL"}}</time>
+                    <a href="#" class="author"><span class="name">{{author}}</span><img src="http://localhost:3000/images/sadecai.jpg"></a>
+                </div>
+            </header>
+            <a href="/{{category}}/{{custom_id}}" class="image featured"><img src={{img_location}}></a>
+            <footer>
+                <ul class="actions">
+                    <li><a href="/{{category}}/{{custom_id}}" class="button large">Continue Reading</a></li>
+                </ul>
+                <ul class="stats">
+                    <li><a href="/{{category}}">{{category}}</a></li>
+                </ul>
+            </footer>
+        </article>
+    {{/each}}
+
+</div>

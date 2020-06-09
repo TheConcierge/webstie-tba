@@ -1,0 +1,33 @@
+<div id="main">
+    <article class="post">
+        <header>
+            <div class="title">
+                <h2><a href="#">{{post.title}}</a></h2>
+                <p>{{post.tagline}}</p>
+            </div>
+            <div class="meta">
+                <time class="published">{{moment post.updated_at "LL"}}</time>
+                <a href="#" class="author"><span class="name">{{postauthor}}</span><img src="/sadecai.jpg" alt="" /></a>
+            </div>
+        </header>
+        <span class="image featured"><img src="{{post.img_location}}" alt="" /></span>
+        <h6>Ingredients</h6>
+        <ul>
+            {{#each post.cocktail.liquors}}
+                <li>{{amount}} {{brand}} {{type}}</li>
+            {{/each}}
+            {{#each post.cocktail.ingredients}}
+                <li>{{amount}} {{brand}} {{type}}</li>
+            {{/each}}
+            {{#each post.cocktail.garnishes}}
+                <li>{{amount}} {{type}}</li>
+            {{/each}}
+        </ul>
+        <h6>Instructions</h6>
+        {{#each post.cocktail.instructions}}
+            <p>{{instruction}}</p>
+        {{/each}}
+        
+        
+    </article>
+</div>

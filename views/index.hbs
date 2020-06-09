@@ -1,0 +1,79 @@
+<div id="main">
+    {{#each posts}}	
+        <article class="post">
+            <header>
+                <div class="title">
+                    <h2><a href="/{{category}}/{{custom_id}}">{{title}}</a></h2>
+                    <p>{{tagline}}</p>
+                </div>
+                <div class="meta">
+                    <time class="published">{{moment updated_at "LL"}}</time>
+                    <a href="#" class="author"><span class="name">{{author}}</span><img src="sadecai.jpg"></a>
+                </div>
+            </header>
+            <a href="/{{category}}/{{custom_id}}" class="image featured"><img src={{img_location}}></a>
+            <footer>
+                <ul class="actions">
+                    <li><a href="/{{category}}/{{custom_id}}" class="button large">Continue Reading</a></li>
+                </ul>
+                <ul class="stats">
+                    <li><a href="/{{category}}">{{category}}</a></li>
+                </ul>
+            </footer>
+        </article>
+    {{/each}}
+</div>
+
+
+
+<section id="sidebar">
+    <section id="intro">
+        <a href="#" class="logo"><img src="sadecai.jpg"></a>
+        <header>
+            <h2>Website</h2>
+            <p>(Real Name TBA)</p>
+        </header>
+    </section>
+    <!-- Intro -->
+                   
+
+    <!-- Mini Posts -->
+    <section>
+        <div class="mini-posts">
+
+            {{#each posts}}
+                <!-- Mini Post -->
+                <article class="mini-post">
+                    <header>
+                        <h3><a href="/{{category}}/{{custom_id}}">{{title}}</a></h3>
+                        <time class="published">{{moment updated_at "LL"}}</time>
+                        <a href="#" class="author"><img src="sadecai.jpg"></a>
+                    </header>
+                    <a href="/{{category}}/{{custom_id}}" class="image"><img src="{{img_location}}"></a>
+                </article>
+            {{/each}}
+        </div>
+    </section>
+
+
+    <!-- About -->
+        <section class="blurb">
+            <h2>About</h2>
+            <p>This is site is a dumping ground for things I want to document. Look around for cocktails, recipes, and bad opinions.</p>
+            <ul class="actions">
+                <li><a href="/about" class="button">Learn More</a></li>
+            </ul>
+        </section>
+
+    <!-- Footer -->
+        <section id="footer">
+            <ul class="icons">
+                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
+                <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+            <p class="copyright">© Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>.</p>
+        </section>
+</section>

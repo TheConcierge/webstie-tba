@@ -1,0 +1,24 @@
+
+    <div id="main">
+        <article class="post">
+            <header>
+                <div class="title">
+                    <h2><a href="#">{{post.title}}</a></h2>
+                    <p>{{post.tagline}}</p>
+                </div>
+                <div class="meta">
+                    <time class="published">{{moment post.updated_at "LL"}}</time>
+                    <a href="#" class="author"><span class="name">{{postauthor}}</span><img src="/sadecai.jpg" alt="" /></a>
+                </div>
+            </header>
+            <span class="image featured"><img src="{{post.img_location}}" alt="" /></span>
+            {{#each post.article.paragraphs}}
+                <p>{{this.text}}</p>
+            {{/each}} 
+            <footer>
+                <ul class="stats">
+                    <li><a href="/articles">Articles</a></li>
+                </ul>
+            </footer>
+        </article>
+</div>
