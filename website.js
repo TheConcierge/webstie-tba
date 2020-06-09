@@ -1,5 +1,7 @@
 const IMG_PATH = './images/';
 
+require('dotenv').config()
+
 var express = require('express');
 var hbs = require( 'express-handlebars');
 var path = require('path');
@@ -15,7 +17,7 @@ app.use('/admin', require('./admin'));
 var fs = require('fs');
 
 //Set up default mongoose connection
-var mongoDB = 'mongodb://127.0.0.1/articles';
+var mongoDB = process.env.MONGODB_URI || 'mongodb://localhost/website';
 mongoose.connect(mongoDB, { useNewUrlParser: true });
 
 //Get the default connection
