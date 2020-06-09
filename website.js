@@ -115,7 +115,9 @@ router.get('/roadmap',function(req, res){
 app.use('*',function(req, res){
   res.send('Error 404: Not Found!');
 });
-  
-app.listen(3000,function(){
+ 
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT,function(){
   console.log('Server running at Port 3000');
 });
